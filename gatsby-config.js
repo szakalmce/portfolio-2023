@@ -10,9 +10,10 @@ module.exports = {
     {
       resolve: 'gatsby-source-wordpress',
       options: {
-        url: 'http://portfolio2023.local/graphql',
+        url: `http://portfolio2023.local/graphql`,
       },
     },
+    `gatsby-plugin-react-helmet`,
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
@@ -21,7 +22,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: './src/images/',
+        path: `${__dirname}/src/images`,
       },
       __key: 'images',
     },
