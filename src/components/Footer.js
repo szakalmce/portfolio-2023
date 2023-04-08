@@ -13,16 +13,15 @@ const Footer = () => {
   console.log(process.env.REACT_APP_CONTENTFUL_TOKEN);
 
   return (
-    // <FooterWrapper>
-    //   <FooterSocialLinksWrapper>
-    //     <SocialLinks footer />
-    //     {value}
-    //   </FooterSocialLinksWrapper>
-    //   <FooterContent onClick={handleClick}>
-    //     &copy; 2023 Tomasz Garbarz. All rights reserved.
-    //   </FooterContent>
-    // </FooterWrapper>
-    <p>eki</p>
+    <FooterWrapper>
+      <FooterSocialLinksWrapper>
+        <SocialLinks footer />
+        {value}
+      </FooterSocialLinksWrapper>
+      <FooterContent>
+        &copy; 2023 Tomasz Garbarz. All rights reserved.
+      </FooterContent>
+    </FooterWrapper>
   );
 };
 
