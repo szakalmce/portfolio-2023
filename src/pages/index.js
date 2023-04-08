@@ -9,11 +9,10 @@ import '../styles/reset.css';
 const IndexPage = () => {
   return (
     <>
-      <Wrapper>
-        {/* <Navbar />
+      {/* <Navbar />
         <Header />
         <Projects /> */}
-      </Wrapper>
+
       <Footer />
     </>
   );
