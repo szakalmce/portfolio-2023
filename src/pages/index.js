@@ -1,5 +1,5 @@
 import React from 'react';
-// import Footer from '../components/Footer/Footer';
+import Footer from '../components/Footer/footer';
 // import Header from '../components/Header/Header';
 // import Navbar from '../components/Navbar/Navbar';
 // import Projects from '../components/Projects/Projects';
@@ -14,7 +14,7 @@ const IndexPage = () => {
         <Header />
         <Projects /> */}
       </Wrapper>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
