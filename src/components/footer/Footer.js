@@ -20,15 +20,16 @@ const Footer = () => {
   };
 
   return (
-    <FooterWrapper>
-      <FooterSocialLinksWrapper>
-        <SocialLinks footer />
-        {value}
-      </FooterSocialLinksWrapper>
-      <FooterContent onClick={handleClick}>
-        &copy; 2023 Tomasz Garbarz. All rights reserved.
-      </FooterContent>
-    </FooterWrapper>
+    // <FooterWrapper>
+    //   <FooterSocialLinksWrapper>
+    //     <SocialLinks footer />
+    //     {value}
+    //   </FooterSocialLinksWrapper>
+    //   <FooterContent onClick={handleClick}>
+    //     &copy; 2023 Tomasz Garbarz. All rights reserved.
+    //   </FooterContent>
+    // </FooterWrapper>
+    <p>eki</p>
   );
 };
 
