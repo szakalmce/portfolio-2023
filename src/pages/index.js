@@ -8,12 +8,14 @@ import '../styles/reset.css';
 
 const IndexPage = () => {
   return (
-    <Wrapper>
-      <Navbar />
-      <Header />
-      <Projects />
+    <>
+      <Wrapper>
+        <Navbar />
+        <Header />
+        <Projects />
+      </Wrapper>
       <Footer />
-    </Wrapper>
+    </>
   );
 };
 

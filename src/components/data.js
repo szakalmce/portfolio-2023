@@ -4,3 +4,9 @@ export const projects = [
   { id: 2, name: 'Project 3', tech: ['node', 'gatsby'] },
   { id: 3, name: 'Project 4', tech: ['node', 'js'] },
 ];
+
+export const techList = [
+  { id: 0, name: 'node' },
+  { id: 1, name: 'js' },
+  { id: 2, name: 'gatsby' },
+];

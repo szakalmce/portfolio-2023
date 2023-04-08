@@ -9,3 +9,15 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+.pentagon {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  transform: rotate(36deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

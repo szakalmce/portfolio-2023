@@ -1,6 +1,11 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `My Gatsby Site`,
@@ -8,9 +13,10 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-source-wordpress',
+      resolve: `gatsby-source-contentful`,
       options: {
-        url: `http://portfolio2023.local/graphql`,
+        spaceId: `ml5cydo82awb`,
+        accessToken: process.env.CONTENTFUL_API_KEY,
       },
     },
     `gatsby-plugin-react-helmet`,

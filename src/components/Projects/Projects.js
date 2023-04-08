@@ -5,12 +5,25 @@ import {
   ProjectsItemsWrapper,
   ProjectsListWrapper,
   ProjectsWrapper,
-  SingleProjectsWrapper,
+  ProjectsInner,
 } from '../../styles/styles';
-import { projects } from '../data';
+import { projects, techList } from '../data';
 import SingleProject from './singleProject/SingleProject';
+import Title from '../utils/Title';
+import { firstToUpper } from '../utils/fn';
 
 const Projects = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulPortfolio2023 {
+        nodes {
+          title
+          livePeview
+        }
+      }
+    }
+  `);
+
   const [currentElement, setCurrentElement] = useState('latest');
 
   // filtorwanie i wracanie do porzedniego stanu
@@ -34,38 +47,36 @@ const Projects = () => {
 
   return (
     <ProjectsWrapper>
-      <ProjectsListWrapper>
-        <ProjectListItem
-          className={`${currentElement === 'latest' ? 'active' : ''}`}
-          onClick={() => handleCurrentElement('latest')}
-        >
-          Latest
-        </ProjectListItem>
-        <ProjectListItem
-          className={`${currentElement === 'node' ? 'active' : ''}`}
-          onClick={() => handleCurrentElement('node')}
-        >
-          Node
-        </ProjectListItem>
-        <ProjectListItem
-          className={`${currentElement === 'js' ? 'active' : ''}`}
-          onClick={() => handleCurrentElement('js')}
-        >
-          JavaScript
-        </ProjectListItem>
-        <ProjectListItem
-          className={`${currentElement === 'gatsby' ? 'active' : ''}`}
-          onClick={() => handleCurrentElement('gatsby')}
-        >
-          Gatsby
-        </ProjectListItem>
-      </ProjectsListWrapper>
+      <Title>Projects</Title>
+      <ProjectsInner>
+        <ProjectsListWrapper>
+          <ProjectListItem
+            className={`${currentElement === 'latest' ? 'active' : ''}`}
+            onClick={() => handleCurrentElement('latest')}
+          >
+            Latest
+          </ProjectListItem>
+          {techList.map((item, index) => {
+            const { id, name } = item;
+            console.log(name);
+            return (
+              <ProjectListItem
+                key={id}
+                className={`${currentElement === name ? 'active' : ''}`}
+                onClick={() => handleCurrentElement(name)}
+              >
+                {firstToUpper(name)}
+              </ProjectListItem>
+            );
+          })}
+        </ProjectsListWrapper>
 
-      <ProjectsItemsWrapper>
-        {filteredProjects.map((project) => (
-          <SingleProject {...project} key={project.id} />
-        ))}
-      </ProjectsItemsWrapper>
+        <ProjectsItemsWrapper>
+          {filteredProjects.map((project) => (
+            <SingleProject {...project} key={project.id} />
+          ))}
+        </ProjectsItemsWrapper>
+      </ProjectsInner>
     </ProjectsWrapper>
   );
 };

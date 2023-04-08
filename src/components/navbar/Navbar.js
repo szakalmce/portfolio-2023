@@ -6,8 +6,7 @@ import {
   SocialLinkItem,
   SocialLink,
 } from '../../styles/styles';
-
-import { BsFacebook, BsGithub, BsLinkedin } from 'react-icons/bs';
+import SocialLinks from '../SocialLinks/SocialLinks';
 
 const Navbar = () => {
   return (
@@ -15,25 +14,7 @@ const Navbar = () => {
       <Logo>
         Tomasz<span>Garbarz</span>
       </Logo>
-      <SocialLinksWrapper>
-        <SocialLinkItem>
-          <SocialLink>
-            <BsFacebook />
-          </SocialLink>
-        </SocialLinkItem>
-
-        <SocialLinkItem>
-          <SocialLink>
-            <BsGithub />
-          </SocialLink>
-        </SocialLinkItem>
-
-        <SocialLinkItem>
-          <SocialLink>
-            <BsLinkedin />
-          </SocialLink>
-        </SocialLinkItem>
-      </SocialLinksWrapper>
+      <SocialLinks />
     </NavbarWrapper>
   );
 };
