@@ -6,11 +6,11 @@ import {
   ProjectsListWrapper,
   ProjectsWrapper,
   ProjectsInner,
-} from '../../styles/styles';
-import { projects, techList } from '../data';
-import SingleProject from './singleProject/SingleProject';
-import Title from '../utils/Title';
-import { firstToUpper } from '../utils/fn';
+} from '../styles/styles';
+import { projects, techList } from './data';
+import SingleProject from './SingleProject';
+import Title from './utils/Title';
+import { firstToUpper } from './utils/fn';
 
 const Projects = () => {
   const data = useStaticQuery(graphql`

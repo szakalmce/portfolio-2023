@@ -6,7 +6,7 @@ import {
   ProjectHoverWrapper,
   Img,
   Button,
-} from '../../../styles/styles';
+} from '../styles/styles';
 
 const SingleProject = ({ name, tech }) => {
   return (

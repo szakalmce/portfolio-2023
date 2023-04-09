@@ -8,15 +8,10 @@ import {
 import SocialLinks from './SocialLinks/SocialLinks';
 
 const Footer = () => {
-  const [value, setValue] = useState(0);
-
-  console.log(process.env.REACT_APP_CONTENTFUL_TOKEN);
-
   return (
     <FooterWrapper>
       <FooterSocialLinksWrapper>
         <SocialLinks footer />
-        {value}
       </FooterSocialLinksWrapper>
       <FooterContent>
         &copy; 2023 Tomasz Garbarz. All rights reserved.

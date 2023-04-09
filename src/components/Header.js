@@ -11,9 +11,9 @@ import {
   HeaderDetails,
   CubeWrapper,
   CubeParagraph,
-} from '../../styles/styles';
+} from '../styles/styles';
 
-import img from '../../images/header-image.png';
+import img from '../images/header-image.png';
 
 const Header = () => {
   return (

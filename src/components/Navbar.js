@@ -5,8 +5,8 @@ import {
   SocialLinksWrapper,
   SocialLinkItem,
   SocialLink,
-} from '../../styles/styles';
-import SocialLinks from '../SocialLinks/SocialLinks';
+} from '../styles/styles';
+import SocialLinks from './SocialLinks/SocialLinks';
 
 const Navbar = () => {
   return (
