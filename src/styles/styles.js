@@ -105,7 +105,6 @@ export const ProjectHoverWrapper = styled.div`
 
 export const SingleProjectsWrapper = styled.div`
   border: 1px solid #eee;
-  height: 250px;
   padding: 1rem;
   display: flex;
   flex-direction: column;
