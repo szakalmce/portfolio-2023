@@ -15,7 +15,7 @@ import {
 
 import img from '../images/header-image.png';
 
-const Header = () => {
+const Header = ({ scrollToMyRef }) => {
   return (
     <HeaderWrapper>
       <HeaderContent>
@@ -25,7 +25,7 @@ const Header = () => {
           tenetur facilis alias tempore, nulla culpa ipsa doloremque eum. Rerum,
           doloremque.
         </Paragraph>
-        <Button>Enroll Now</Button>
+        <Button onClick={scrollToMyRef}>Enroll Now</Button>
       </HeaderContent>
 
       <HeaderDetails>
@@ -36,7 +36,7 @@ const Header = () => {
         </CubeWrapper>
         <CubeWrapper>
           <CubeParagraph>
-            +10 <span>Projects</span>
+            +3Y <span>Experience</span>
           </CubeParagraph>
           nh
         </CubeWrapper>

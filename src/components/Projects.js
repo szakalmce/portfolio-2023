@@ -12,22 +12,8 @@ import SingleProject from './SingleProject';
 import Title from './utils/Title';
 import { firstToUpper } from './utils/fn';
 
-const Projects = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allContentfulPortfolio2023 {
-        nodes {
-          title
-          livePeview
-        }
-      }
-    }
-  `);
-
+const Projects = ({ myRef }) => {
   const [currentElement, setCurrentElement] = useState('latest');
-
-  // filtorwanie i wracanie do porzedniego stanu
-
   const [filteredProjects, setFilteredProjects] = useState(projects);
 
   const handleCurrentElement = (id) => {
@@ -46,7 +32,7 @@ const Projects = () => {
   };
 
   return (
-    <ProjectsWrapper>
+    <ProjectsWrapper ref={myRef}>
       <Title>Projects</Title>
       <ProjectsInner>
         <ProjectsListWrapper>

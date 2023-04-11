@@ -167,11 +167,8 @@ export const SocialLinksWrapper = styled.ul`
   display: flex;
   gap: 0.5rem;
 `;
-export const SocialLinkItem = styled.li`
-  cursor: pointer;
-  padding: 0.25rem;
-  background-color: ${(props) => (props.footer ? '#ddd' : '#eee')};
-`;
+
+/* SOCIAL LINKS */
 
 export const SocialLink = styled.a`
   margin: 0;
@@ -179,6 +176,21 @@ export const SocialLink = styled.a`
   display: block;
   line-height: 0;
   font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
+`;
+
+export const SocialLinkItem = styled.li`
+  cursor: pointer;
+  padding: 0.45rem;
+  background-color: ${(props) => (props.footer ? '#ddd' : '#eee')};
+  transition: all 0.1s ease-in-out;
+  border-radius: 10px;
+
+  &:hover,
+  &:hover ${SocialLink} {
+    background-color: #000;
+    color: #fff;
+  }
 `;
 
 /* HEADER */
@@ -195,7 +207,7 @@ export const HeaderWrapper = styled.div`
   position: relative;
   justify-content: center;
   align-items: center;
-  padding: 0 1rem;
+  padding: 1rem 2rem 0;
 
   @media ${devices.mobile} {
     height: 90vh;
@@ -225,6 +237,12 @@ export const Button = styled.button`
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
 
   ${(props) =>
     props.project &&
@@ -233,18 +251,19 @@ export const Button = styled.button`
 
       padding: 0.25rem;
       border: 1px solid #000;
-      transition: all 0.25s ease-in-out;
+      transition: all 0.2s ease-in-out;
 
       &:hover {
         background-color: #eee;
         border-color: #eee;
+        color: #000;
       }
     `}
 `;
 
 export const HeaderImgWrapper = styled.div`
   grid-area: 4 / 4 / 7 / 7;
-  margin-top: 4rem;
+  margin-top: 3.6rem;
 
   @media ${devices.mobile} {
     display: none;
